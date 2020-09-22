@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Menu Form Pengobatan -->
+        <record id="mod_aa_hms_pengobatan_view_hospital_hms_treatment_form_custom" model="ir.ui.view">
+            <field name="name">mod.hms.treatment.form</field>
+            <field name="model">hms.treatment</field>
+            <field name="inherit_id" ref="aa_hms_pengobatan.view_hospital_hms_treatment_form_custom"/>
+            <field name="priority">20</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='diagnosis_id']" position="replace" />
+
+                <xpath expr="//field[@name='tindakan']/parent::group" position="after">
+                    <group string="Diagnosis 1">
+                        <group>
+                            <field name="diagnosis_id" nolabel="1" />
+                        </group>
+                    </group>
+                    <group string="Diagnosis 2">
+                        <group>
+                            <field name="second_diagnosis_id" nolabel="1" />
+                        </group>
+                    </group>
+                </xpath>
+
+                <xpath expr="//notebook" position="inside">
+                    <page string="Tanda Vital">
+                        <field name="patient_appointment_ids">
+                            <tree string="Tanda Vital">
+                                <field name="name" string="Appointment"/>
+                                <field name="date" string="Tanggal"/>
+                                <field name="lingkar_kepala"/>
+                                <field name="berat_badan"/>
+                                <field name="tinggi_badan"/>
+                                <field name="suhu_badan"/>
+                                <field name="pernafasan"/>
+                                <field name="nadi"/>
+                                <field name="tekanan_darah"/>
+                                <field name="state" invisible="True"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="aa_hms_mod.list">
+      <field name="name">aa_hms_mod list</field>
+      <field name="model">aa_hms_mod.aa_hms_mod</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="aa_hms_mod.action_window">
+      <field name="name">aa_hms_mod window</field>
+      <field name="res_model">aa_hms_mod.aa_hms_mod</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="aa_hms_mod.action_server">
+      <field name="name">aa_hms_mod server</field>
+      <field name="model_id" ref="model_aa_hms_mod_aa_hms_mod"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="aa_hms_mod" id="aa_hms_mod.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="aa_hms_mod.menu_1" parent="aa_hms_mod.menu_root"/>
+    <menuitem name="Menu 2" id="aa_hms_mod.menu_2" parent="aa_hms_mod.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="aa_hms_mod.menu_1_list" parent="aa_hms_mod.menu_1"
+              action="aa_hms_mod.action_window"/>
+    <menuitem name="Server to list" id="aa_hms_mod" parent="aa_hms_mod.menu_2"
+              action="aa_hms_mod.action_server"/>
+    -->
+  </data>
+</odoo>

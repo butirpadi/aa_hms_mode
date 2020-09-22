@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="mod_acs_hms_view_patient_form">
+            <field name="name">mod.acs.hms.view.patient.form</field>
+            <field name="model">hms.patient</field>
+            <field name="inherit_id" ref="acs_hms.view_patient_form"/>
+            <field name="priority">20</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='patient_diseases']" position="replace">
+                    <field name="patient_diseases" nolabel="1" colspan="4">
+                        <tree>
+                            <field name="disease" string="Dianosis 1" />
+                            <field name="second_disease" string="Dianosis 2"/>
+                            <field name="diagnosed_date" />
+                            <field name="physician_id"/>
+                            <field name="treatment_id"/>
+                            <field name="description"/>
+                            <field name="anamnesis"/>
+                            <field name="pemeriksaan_fisik"/>
+                            <field name="tindakan"/>
+                            <field name="allergy_type"/>
+                        </tree>
+                    </field>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
