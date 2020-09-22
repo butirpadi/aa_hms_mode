@@ -1,0 +1,7 @@
+*.pyc
+*.cpython-35.pyc
+.project
+.pydevproject
+.settings
+.vscode
+apprunner
