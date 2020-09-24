@@ -23,6 +23,26 @@
                         </tree>
                     </field>
                 </xpath>
+
+                <xpath expr="//field[@name='code']/parent::group/parent::group" position="before">
+                    <group>
+                        <div name="duplicate_patients" attrs="{'invisible':[('duplicate_patient_count', '=', 0)]}">
+                            <h4 class="text-danger">Duplicate Patients</h4>
+                            <field name="duplicate_patient_count" invisible="1" />
+                            <field name="duplicate_patient_ids" readonly="1" attrs="{'invisible':[('duplicate_patient_count', '=', 0)]}" >
+                                <tree>
+                                    <field name="code"/>
+                                    <field name="name"/>
+                                    <field name="age"/>
+                                    <field name="sex"/>
+                                    <field name="nama_ayah"/>
+                                    <field name="nama_ibu"/>
+                                </tree>
+                            </field>
+                        </div>
+                    </group>
+                </xpath>
+
             </field>
         </record>
     </data>
