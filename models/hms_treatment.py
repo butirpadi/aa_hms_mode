@@ -8,7 +8,8 @@ class ACSTreatment(models.Model):
 
     second_diagnosis_id = fields.Many2one('hms.diseases', string='Diagnosis 2',
                                           states={'cancel': [('readonly', True)], 'done': [('readonly', True)]})
-    patient_appointment_ids = fields.One2many(related='patient_id.appointment_line', string='Patient Appointments')
+    patient_appointment_ids = fields.One2many(
+        related='patient_id.appointment_line', string='Patient Appointments')
 
     @api.model
     def _get_default_physician(self):
@@ -33,3 +34,11 @@ class ACSTreatment(models.Model):
         })
 
         return result
+
+    def treatment_cancel(self):
+        res = super().treatment_cancel()
+
+        # delete patient disease
+        self.patient_disease_id.unlink()
+
+        return res
