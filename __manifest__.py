@@ -26,6 +26,7 @@
         # 'security/ir.model.access.csv',
         'views/hms_treatment_view.xml',
         'views/view_patient_form.xml',
+        'views/hms_appointment_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

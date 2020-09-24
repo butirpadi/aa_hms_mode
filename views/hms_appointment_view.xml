@@ -1,0 +1,17 @@
+
+
+<odoo>
+    <data>
+    <record model="ir.ui.view" id="butirpadi_acs_hms_view_hms_appointment_tree">
+            <field name="name">butirpadi.acs.hms.view.hms.appointment.tree</field>
+            <field name="model">hms.appointment</field>
+            <field name="inherit_id" ref="acs_hms.view_hms_appointment_tree"/>
+            <field name="priority">20</field>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="default_order">id desc</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -45,5 +45,17 @@
             </field>
         </record>
 
+        <record model="ir.ui.view" id="butirpadi_acs_hms_view_hospital_hms_treatment_tree">
+            <field name="name">butirpadi.acs_hms.view.hospital.hms.treatment.tree</field>
+            <field name="model">hms.treatment</field>
+            <field name="inherit_id" ref="acs_hms.view_hospital_hms_treatment_tree"/>
+            <field name="priority">20</field>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="default_order">id desc</attribute>
+                </xpath>
+            </field>
+        </record>
+
     </data>
 </odoo>
