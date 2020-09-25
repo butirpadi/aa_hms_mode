@@ -27,6 +27,7 @@
         'views/hms_treatment_view.xml',
         'views/view_patient_form.xml',
         'views/hms_appointment_view.xml',
+        'reports/pasien_penyakit_report.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <template id="inherit_document_penyakit_pasien_butirpadi" name="inherit.document.penyakit.pasien.butirpadi" inherit_id="aa_hms_pasien.pasien_penyakit_document">
+            <xpath expr="//th[text()='Diagnosis']" position="replace">
+                <th colspan="2">Diagnosis</th>
+            </xpath>
+
+            <xpath expr="//span[@t-esc='line.disease.name']/parent::td" position="after">
+                <td>
+                    <span t-esc="line.second_disease.name"/>
+                </td>
+            </xpath>
+        </template>
+    </data>
+</odoo>
