@@ -1,8 +1,6 @@
-
-
 <odoo>
     <data>
-    <record model="ir.ui.view" id="butirpadi_acs_hms_view_hms_appointment_tree">
+        <record model="ir.ui.view" id="butirpadi_acs_hms_view_hms_appointment_tree">
             <field name="name">butirpadi.acs.hms.view.hms.appointment.tree</field>
             <field name="model">hms.appointment</field>
             <field name="inherit_id" ref="acs_hms.view_hms_appointment_tree"/>
@@ -14,4 +12,36 @@
             </field>
         </record>
     </data>
+
+    <record id="butirpadi_view_hms_appointment_form_form" model="ir.ui.view">
+        <field name="name">butirpadi.view.hms.appointment.form.form</field>
+        <field name="model">hms.appointment</field>
+        <field name="inherit_id" ref="acs_hms.view_hms_appointment_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='patient_diseases']" position="replace">
+                <field name="patient_diseases" nolabel="1" colspan="4">
+                    <tree>
+                        <field name="disease" string="Dianosis 1" />
+                        <field name="second_disease" string="Dianosis 2"/>
+                        <field name="diagnosed_date" />
+                        <field name="physician_id"/>
+                        <field name="treatment_id"/>
+                        <field name="description"/>
+                        <field name="anamnesis"/>
+                        <field name="pemeriksaan_fisik"/>
+                        <field name="tindakan"/>
+                        <field name="allergy_type"/>
+                    </tree>
+                </field>
+            </xpath>
+
+            <xpath expr="//field[@name='age']" position="before">
+                <field name="dob"/>
+            </xpath>
+            <xpath expr="//field[@name='age']" position="after">
+                <field name="nama_ayah"/>
+                <field name="nama_ibu"/>
+            </xpath>
+        </field>
+    </record>
 </odoo>
