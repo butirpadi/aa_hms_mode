@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_aa_hms_mod_aa_hms_mod,aa_hms_mod.aa_hms_mod,model_aa_hms_mod_aa_hms_mod,,1,0,0,0
+access_aa_hms_mode_aa_hms_mode,aa_hms_mode.aa_hms_mode,model_aa_hms_mode_aa_hms_mode,,1,0,0,0

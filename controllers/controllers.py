@@ -2,19 +2,19 @@
 from odoo import http
 
 # class AaHmsMod(http.Controller):
-#     @http.route('/aa_hms_mod/aa_hms_mod/', auth='public')
+#     @http.route('/aa_hms_mode/aa_hms_mode/', auth='public')
 #     def index(self, **kw):
 #         return "Hello, world"
 
-#     @http.route('/aa_hms_mod/aa_hms_mod/objects/', auth='public')
+#     @http.route('/aa_hms_mode/aa_hms_mode/objects/', auth='public')
 #     def list(self, **kw):
-#         return http.request.render('aa_hms_mod.listing', {
-#             'root': '/aa_hms_mod/aa_hms_mod',
-#             'objects': http.request.env['aa_hms_mod.aa_hms_mod'].search([]),
+#         return http.request.render('aa_hms_mode.listing', {
+#             'root': '/aa_hms_mode/aa_hms_mode',
+#             'objects': http.request.env['aa_hms_mode.aa_hms_mode'].search([]),
 #         })
 
-#     @http.route('/aa_hms_mod/aa_hms_mod/objects/<model("aa_hms_mod.aa_hms_mod"):obj>/', auth='public')
+#     @http.route('/aa_hms_mode/aa_hms_mode/objects/<model("aa_hms_mode.aa_hms_mode"):obj>/', auth='public')
 #     def object(self, obj, **kw):
-#         return http.request.render('aa_hms_mod.object', {
+#         return http.request.render('aa_hms_mode.object', {
 #             'object': obj
 #         })
